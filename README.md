@@ -1,3 +1,2 @@
 # IEEE_INTERN
-Today we had a session about Git and GitHub.
-Nys
+This repo was created for IEEE Intership 2026
