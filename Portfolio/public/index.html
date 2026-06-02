@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abhijith J – ECE Student at GCEK Kannur. Portfolio showcasing electronics, embedded systems, and programming projects." />
+  <meta name="keywords" content="Abhijith J, ECE, GCEK, Kannur, Arduino, NodeMCU, Portfolio, Electronics" />
+  <meta name="author" content="Abhijith J" />
+  <title>Abhijith J | ECE Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <span class="loader-text">INITIALIZING</span>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AJ<span class="accent">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <!-- Animated grid overlay -->
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <!-- Profile Image -->
+      <div class="hero-image-wrap" data-reveal>
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring ring2"></div>
+        <div class="hero-avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="hero-image-badge">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+      </div>
+
+      <div class="hero-text" data-reveal>
+        <p class="hero-greeting"><span class="mono">&gt;_</span> Hello, World!</p>
+        <h1 class="hero-name">Abhijith<span class="accent"> J</span></h1>
+        <div class="typing-wrap">
+          <span class="typing-prefix">I'm a </span>
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-location">
+          <i class="fa-solid fa-location-dot accent"></i>
+          Kannur, Kerala, India
+        </p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-hint">
+          <span>Scroll Down</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating tags -->
+    <div class="float-tag tag1"><i class="fa-brands fa-github"></i></div>
+    <div class="float-tag tag2"><i class="fa-solid fa-microchip"></i></div>
+    <div class="float-tag tag3"><i class="fa-solid fa-code"></i></div>
+    <div class="float-tag tag4"><i class="fa-solid fa-wifi"></i></div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass" data-reveal>
+          <div class="about-card-glow"></div>
+          <div class="about-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+          <h3>Who Am I?</h3>
+          <p>I'm <strong>Abhijith J</strong>, a passionate B.Tech student in Electronics and Communication Engineering at Government College of Engineering Kannur (GCEK), Kerala. Currently in my second year, I'm deeply fascinated by the intersection of hardware and software.</p>
+        </div>
+
+        <div class="about-card glass" data-reveal>
+          <div class="about-card-glow"></div>
+          <div class="about-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>What I Do</h3>
+          <p>From designing embedded systems with Arduino and NodeMCU to writing clean, efficient C code, I love turning ideas into real working circuits and smart solutions. I thrive on solving complex engineering challenges.</p>
+        </div>
+
+        <div class="about-card glass" data-reveal>
+          <div class="about-card-glow"></div>
+          <div class="about-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>My Vision</h3>
+          <p>I aspire to build innovative IoT solutions and smart systems that make a meaningful difference. Rooted in the vibrant tech culture of Kerala, I'm constantly learning and pushing the boundaries of what's possible.</p>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="stats-row" data-reveal>
+        <div class="stat-item">
+          <span class="stat-num" data-count="2">2</span><span class="accent">+</span>
+          <span class="stat-label">Years of Study</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="10">1</span><span class="accent">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="5">3+</span><span class="accent">+</span>
+          <span class="stat-label">Tech Events</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="8">5+</span><span class="accent">+</span>
+          <span class="stat-label">Skills Learned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <!-- Skill Cards -->
+      <div class="skills-grid" data-reveal>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-brands fa-arduino" style="color:#00979C"></i></div>
+          <h4>Arduino</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="85">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-solid fa-wifi" style="color:#00e5ff"></i></div>
+          <h4>NodeMCU / IoT</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="80">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">80%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-brands fa-html5" style="color:#e34f26"></i></div>
+          <h4>HTML5</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="90">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">60%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-brands fa-css3-alt" style="color:#264de4"></i></div>
+          <h4>CSS3</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="85">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">35%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-solid fa-c" style="color:#00e5ff"></i></div>
+          <h4>C Programming</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="78">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">48%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-solid fa-microchip" style="color:#00e5ff"></i></div>
+          <h4>Embedded Systems</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="80">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">40%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-solid fa-diagram-project" style="color:#00e5ff"></i></div>
+          <h4>Circuit Design</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="75">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">75%</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-card-glow"></div>
+          <div class="skill-icon"><i class="fa-solid fa-puzzle-piece" style="color:#00e5ff"></i></div>
+          <h4>Problem Solving</h4>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="88">
+              <div class="skill-bar-fill"></div>
+            </div>
+            <span class="skill-pct">88%</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Floating tech tags -->
+      <div class="tech-tags" data-reveal>
+        <span class="tech-tag">Arduino IDE</span>
+        <span class="tech-tag">VS Code</span>
+        <span class="tech-tag">Proteus</span>
+        <span class="tech-tag">Edge AI</span>
+        <span class="tech-tag">Blynk IoT</span>
+        <span class="tech-tag">VLSI Design</span>
+        <span class="tech-tag">PCB Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass" data-reveal>
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-num">01</div>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-wrap">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3>Arduino Smart System</h3>
+          <p>An Arduino-based automation system featuring sensor integration, real-time data monitoring, and automated control logic for smart environment management.</p>
+          <div class="project-tags">
+            <span>Arduino</span>
+            <span>C++</span>
+            <span>Sensors</span>
+            <span>Automation</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass" data-reveal>
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-num">02</div>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-wrap">
+            <i class="fa-solid fa-cloud-bolt"></i>
+          </div>
+          <h3>NodeMCU IoT Dashboard</h3>
+          <p>A cloud-connected IoT solution using NodeMCU ESP8266, enabling remote monitoring and control of devices through a web dashboard and mobile app via MQTT protocol.</p>
+          <div class="project-tags">
+            <span>NodeMCU</span>
+            <span>IoT</span>
+            <span>MQTT</span>
+            <span>Blynk</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass" data-reveal>
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-num">03</div>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-wrap">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>A fully responsive, animated portfolio website built with pure HTML, CSS, and JavaScript, featuring particle effects, glassmorphism UI, and smooth scroll animations.</p>
+          <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass" data-reveal>
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-num">04</div>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-wrap">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+          </div>
+          <h3>Electronics Mini Projects</h3>
+          <p>A collection of circuit design and electronics projects including amplifier circuits, signal generators, power supply units, and sensor-based alarm systems.</p>
+          <div class="project-tags">
+            <span>Circuits</span>
+            <span>Electronics</span>
+            <span>Proteus</span>
+            <span>PCB</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="timeline" data-reveal>
+        <div class="timeline-line"></div>
+
+        <!-- GCEK -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-year">2024 – Present</div>
+            <h3>B.Tech in Electronics &amp; Communication Engineering</h3>
+            <h4><i class="fa-solid fa-building-columns accent"></i> Government College of Engineering Kannur (GCEK)</h4>
+            <p>Pursuing a four-year undergraduate program specializing in electronics & communication systems under APJ Abdul Kalam Technological University, Kerala.</p>
+            <div class="timeline-tags">
+              <span>VLSI</span>
+              <span>Digital Signal Processing</span>
+              <span>Embedded Systems</span>
+              <span>Microprocessors</span>
+              <span>Control Sysytems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Higher Secondary -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-badge"><i class="fa-solid fa-school"></i></div>
+            <div class="timeline-year">2022 – 2024</div>
+            <h3>Higher Secondary Education (Computer Science – PCM)</h3>
+            <h4><i class="fa-solid fa-location-dot accent"></i> Kannur, Kerala</h4>
+            <p>Completed Plus Two with Computer science, Physics, Chemistry, and Mathematics with a strong foundation in sciences, fuelling a passion for electronics and engineering.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS SECTION ===== -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">// 05</span>
+        <h2 class="section-title">Achievements &amp; <span class="accent">Activities</span></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="achieve-grid">
+
+        <div class="achieve-card glass" data-reveal>
+          <div class="achieve-glow"></div>
+          <div class="achieve-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="achieve-body">
+            <h4>Technical Events &amp; Competitions</h4>
+            <p>Actively participated in multiple technical fests, hackathons, and engineering competitions, showcasing innovative electronics and embedded systems solutions.</p>
+          </div>
+          <div class="achieve-badge"><i class="fa-solid fa-star"></i></div>
+        </div>
+
+    
+
+        <div class="achieve-card glass" data-reveal>
+          <div class="achieve-glow"></div>
+          <div class="achieve-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="achieve-body">
+            <h4>Entrepreneurship &amp; Innovation</h4>
+            <p>Engaged in entrepreneurship programs and innovation bootcamps, developing the mindset to identify real-world problems and build scalable tech-driven solutions.</p>
+          </div>
+          <div class="achieve-badge"><i class="fa-solid fa-star"></i></div>
+        </div>
+
+        <div class="achieve-card glass" data-reveal>
+          <div class="achieve-glow"></div>
+          <div class="achieve-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="achieve-body">
+            <h4>Club &amp; Community Involvement</h4>
+            <p>Active member of IEEE SB GCEK, collaborating on projects and organizing workshops to inspire fellow students in the ECE domain.Currently working as <strong>Vice chair </strong> of RAS.</p>
+          </div>
+          <div class="achieve-badge"><i class="fa-solid fa-star"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">// 06</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <div class="title-line"></div>
+        <p class="section-sub">Have a project idea or just want to connect? I'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-layout" data-reveal>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:abhijithj@example.com" class="contact-val">abhijithj0711@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+919xxxxxxxxx" class="contact-val">+91 907XXXXXXX</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/abhijith-jayasankar/" target="_blank" class="contact-val">linkedin.com/abhijith-jayasankar</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/Abhijith-J-Official" target="_blank" class="contact-val">github.com/abhijithj</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-val">Kannur, Kerala, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap glass">
+          <div class="form-glow"></div>
+          <h3>Send a Message</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe" />
+            <div class="input-line"></div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" />
+            <div class="input-line"></div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="Project Collaboration" />
+            <div class="input-line"></div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Your message here..."></textarea>
+            <div class="input-line"></div>
+          </div>
+          <button class="btn btn-primary w-full">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">AJ<span class="accent">.</span></a>
+        <p class="footer-tagline">Building the future, one circuit at a time.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Abhijith-J-Official" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abhijith-jayasankar/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:abhijithj0711@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">
+          &copy; <span id="year"></span> <strong>Abhijith J</strong>. All rights reserved.
+          <br/><span class="mono" style="font-size:0.75rem;opacity:.5">ECE Student @ GCEK Kannur</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" title="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
